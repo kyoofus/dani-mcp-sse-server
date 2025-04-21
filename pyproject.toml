@@ -1,0 +1,24 @@
+[project]
+name = "dani-mcp-sse-server"
+version = "0.1.0"
+description = "A MCP server project"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+ "fastapi-mcp>=0.3.0",
+ "mcp>=1.6.0",
+ "mcp-proxy>=0.5.1",
+ "starlette>=0.46.2",
+ "uvicorn>=0.34.2",
+]
+[[project.authors]]
+name = "KyoOfUS"
+email = "kyoofus@gmailc.om"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+dani-mcp-sse-server = "dani_mcp_sse_server:main"
+dani-mcp-sse-client = "dani_mcp_sse_server.client:main"
